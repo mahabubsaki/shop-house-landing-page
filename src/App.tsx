@@ -1,56 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React, { useEffect } from 'react';
 import './App.css';
+import BottomStickyNav from './components/BottomStickyNav';
+import MiddleNav from './components/MiddleNav';
+import Notice from './components/Notice';
+import TopNav from './components/TopNav';
+import "rsuite/dist/rsuite.min.css";
+import 'swiper/css';
+import "swiper/css/free-mode";
+import 'animate.css';
+import MobileBottomNav from './components/MobileBottomNav';
+import SliderHeader from './components/SliderHeader';
+import SliderFeature from './components/SliderFeature';
+import FeaturedProducts from './components/FeaturedProducts';
+
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className="App relative">
+      <Notice />
+      <TopNav />
+      <MiddleNav />
+      <BottomStickyNav />
+      <SliderHeader />
+      <SliderFeature />
+      <FeaturedProducts />
+      <div className='h-[10000px]'>
+
+      </div>
+      <MobileBottomNav />
+
     </div>
   );
 }
