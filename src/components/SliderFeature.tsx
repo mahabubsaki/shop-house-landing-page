@@ -1,8 +1,7 @@
 import React from 'react';
 import { FaShippingFast } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from 'swiper';
-import styles from '../styles/SliderFeature.module.css';
+import { Autoplay } from 'swiper';
 import { Ri24HoursFill, RiMoneyDollarCircleLine } from 'react-icons/ri';
 import f1 from '../assets/feature-1.jpg';
 import f2 from '../assets/feature-2.jpg';
@@ -23,9 +22,13 @@ const SliderFeature = () => {
     };
 
     return (
-        <div>
+        <div className='mb-[20px]'>
             <div className='max-w-[1200px] mx-auto px-[10px] bg-white'>
-                <Swiper grabCursor={true} modules={[FreeMode]} freeMode={true} breakpoints={breakpoints} pagination={{ clickable: true }} className='h-[70px] mb-[20px]'>
+                <Swiper modules={[Autoplay]} autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: true,
+                }}
+                    loop={true} breakpoints={breakpoints} className='h-[70px] mb-[20px]'>
                     <SwiperSlide >
                         <div className='border-r-0 sm:border-r border-[#E7E7E7] h-full py-4 flex justify-center items-center cursor-pointer'>
                             <div className='flex items-center gap-[15px]'>
@@ -61,7 +64,7 @@ const SliderFeature = () => {
                     </SwiperSlide>
 
                 </Swiper>
-                <Swiper breakpoints={{
+                <Swiper modules={[Autoplay]} breakpoints={{
                     1: {
                         slidesPerView: 1,
 
@@ -75,7 +78,11 @@ const SliderFeature = () => {
                         spaceBetween: 20
                     },
 
-                }} pagination={{ clickable: true }} className='h-[175px]'>
+                }} autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: true,
+                }}
+                    loop={true} className='h-[175px]'>
                     <SwiperSlide className=' relative'>
                         <div className='absolute flex flex-col justify-center left-[6.5%] right-[6.5%] items-start inset-0 z-20 cursor-pointer'>
                             <p className='text-[#222529] text-[24px] font-bold '>
