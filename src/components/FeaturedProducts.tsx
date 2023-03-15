@@ -59,7 +59,7 @@ const FeaturedProducts = () => {
                     </div>
                     <div ref={newArrivalRef} className='px-[20px] py-[10px] mx-0 my-0 xl:-mx-[20px] xl:-my-[10px]'>
                         <Swiper navigation={true} modules={[Navigation]} breakpoints={breakpoints}>
-                            {newArrival.map((item, i) => <SwiperSlide className='mb-[20px] animate__animated animate__fadeInLeft' key={i}>
+                            {newArrival.map((item, i) => <SwiperSlide className='mb-[20px]' key={i}>
                                 <HomeSingleProduct item={item} key={i} delay={i} isNewArrival={isNewArrivalInView} section='new' />
                             </SwiperSlide>)}
                         </Swiper>

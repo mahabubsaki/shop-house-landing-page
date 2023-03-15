@@ -12,6 +12,7 @@ import MobileBottomNav from './components/MobileBottomNav';
 import SliderHeader from './components/SliderHeader';
 import SliderFeature from './components/SliderFeature';
 import FeaturedProducts from './components/FeaturedProducts';
+import SaleBanner from './components/SaleBanner';
 
 
 function App() {
@@ -27,11 +28,11 @@ function App() {
       <SliderHeader />
       <SliderFeature />
       <FeaturedProducts />
+      <SaleBanner />
       <div className='h-[10000px]'>
 
       </div>
       <MobileBottomNav />
-
     </div>
   );
 }

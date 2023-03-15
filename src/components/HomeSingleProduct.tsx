@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
-import { BsHeart } from 'react-icons/bs';
+import { BsCartPlus, BsHeart } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
-import { TbShoppingCartPlus } from 'react-icons/tb';
 
 const HomeSingleProduct = ({ item: { category, discount, image, isHot, name, price, rating }, delay, isFeatured, isNewArrival, section }: {
     item: {
@@ -52,7 +51,7 @@ const HomeSingleProduct = ({ item: { category, discount, image, isHot, name, pri
                         <BsHeart />
                     </button>
                     <button className={`${!figImg ? 'bg-[#F4F4F4] duration-500 text-[#6F6E6B]' : 'bg-[#2B2B2D] z-[2] text-white'} border duration-500 border-[#f4f4f4] leading-[34px]   px-[12px] flex items-center md:px-[14px] text-[10.5px] md:text-[12px] font-semibold cursor-pointer gap-[2px]`}>
-                        {figImg && <TbShoppingCartPlus className='text-xl' />}
+                        {figImg && <BsCartPlus className='text-xl' />}
                         <span>ADD TO CART</span>
                     </button>
                     <button title='View Product Details' className={`${!figImg ? '-left-[40px] opacity-0' : '-left-0 opacity-100'} w-[36px] text-[#6f6e6b] duration-500 hover:text-[#333] flex justify-center items-center bg-[#F4F4F4] h-[36px] text-[14px] relative `}>
