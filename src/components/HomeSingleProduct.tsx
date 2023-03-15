@@ -30,7 +30,7 @@ const HomeSingleProduct = ({ item: { category, discount, image, isHot, name, pri
                 </div>
 
 
-                <div className='absolute top-2 left-2'>
+                <div className='absolute top-2 z-[20] left-2'>
                     {isHot ? <div className=' text-[10px] text-white font-semibold leading-[10px] bg-[#2ba968] rounded-[12px] mb-1 py-[5px] px-[12px]'>HOT</div> : null}
                     {discount ? <div className=' text-[10px] text-white font-semibold leading-[10px] bg-[#da5555] rounded-[12px] mb-1 py-[5px] px-[12px]'>-{discount}%</div> : null}
                 </div>
