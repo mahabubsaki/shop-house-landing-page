@@ -67,6 +67,10 @@ const CategoriesSlider = () => {
                                 slidesPerView: 4,
                                 spaceBetween: 20
                             },
+                            1024: {
+                                slidesPerView: 5,
+                                spaceBetween: 20
+                            }
                         }}>
                         {categories.map((item, i) => <SwiperSlide key={i}>
                             <div className={`w-full ${styles.parent} cursor-pointer ${isCategoryInView && `animate__fadeInUp animate__animated animate__delay-${i}s`}`}>
