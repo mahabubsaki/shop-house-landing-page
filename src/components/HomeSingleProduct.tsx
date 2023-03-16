@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
-import { BsCartPlus, BsHeart } from 'react-icons/bs';
+import { BsCartPlus, BsFillHeartFill, BsHeart } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
 
 const HomeSingleProduct = ({ item: { category, discount, image, isHot, name, price, rating }, delay, isFeatured, isNewArrival, section }: {
@@ -33,6 +33,10 @@ const HomeSingleProduct = ({ item: { category, discount, image, isHot, name, pri
                     {isHot ? <div className=' text-[10px] text-white font-semibold leading-[10px] bg-[#2ba968] rounded-[12px] mb-1 py-[5px] px-[12px]'>HOT</div> : null}
                     {discount ? <div className=' text-[10px] text-white font-semibold leading-[10px] bg-[#da5555] rounded-[12px] mb-1 py-[5px] px-[12px]'>-{discount}%</div> : null}
                 </div>
+                <div className='absolute top-2 right-2 z-[20] text-2xl block xs:hidden'>
+                    <BsHeart />
+                    {/* <BsFillHeartFill /> */}
+                </div>
             </figure>
             <div className='px-2 flex flex-col items-center text-center'>
                 <p className='uppercase text-[9px] md:text-[10px] hover:text-[#08c] duration-500 cursor-pointer text-[#777]'>CATEGORY : {category}</p>
@@ -46,15 +50,15 @@ const HomeSingleProduct = ({ item: { category, discount, image, isHot, name, pri
                     {discount ? <span className='text-[#222529] text-[16px] md:text-[18px] font-semibold'>${(price - price * (discount / 100)).toFixed(2)}</span> : null}
                     {!discount ? <span className='text-[#222529] text-[16px] md:text-[18px] font-semibold'>${price.toFixed(2)}</span> : null}
                 </div>
-                <div className='mb-4 items-stretch flex gap-[0.5px]'>
-                    <button title='Add To Wishlist' className={`${!figImg ? '-right-[40px] opacity-0' : '-right-0 opacity-100'} w-[36px] text-[#6f6e6b] hover:text-[#333] flex justify-center items-center duration-500 bg-[#F4F4F4] h-[36px] text-[14px] relative `}>
+                <div className='mb-4 items-stretch flex'>
+                    <button title='Add To Wishlist' className={`${!figImg ? '-right-[40px] opacity-0' : '-right-0 opacity-100'} w-[36px] text-[#6f6e6b] hover:text-[#333] hidden xs:flex justify-center items-center duration-500 bg-[#F4F4F4] h-[36px] text-[14px] relative `}>
                         <BsHeart />
                     </button>
-                    <button className={`${!figImg ? 'bg-[#F4F4F4] duration-500 text-[#6F6E6B]' : 'bg-[#2B2B2D] z-[2] text-white'} border duration-500 border-[#f4f4f4] leading-[34px]   px-[12px] flex items-center md:px-[14px] text-[10.5px] md:text-[12px] font-semibold cursor-pointer gap-[2px]`}>
+                    <button className={`${!figImg ? 'bg-[#F4F4F4] w-auto truncate duration-500 text-[#6F6E6B]' : 'bg-[#2B2B2D] z-[2] text-white'} border duration-500 border-[#f4f4f4] leading-[34px]   px-[12px] flex items-center md:px-[14px] text-[10.5px] md:text-[12px] font-semibold cursor-pointer gap-[2px]`}>
                         {figImg && <BsCartPlus className='text-xl' />}
                         <span>ADD TO CART</span>
                     </button>
-                    <button title='View Product Details' className={`${!figImg ? '-left-[40px] opacity-0' : '-left-0 opacity-100'} w-[36px] text-[#6f6e6b] duration-500 hover:text-[#333] flex justify-center items-center bg-[#F4F4F4] h-[36px] text-[14px] relative `}>
+                    <button title='View Product Details' className={`${!figImg ? '-left-[40px] opacity-0' : '-left-0 opacity-100'} w-[36px] text-[#6f6e6b] duration-500 hover:text-[#333] hidden xs:flex justify-center items-center bg-[#F4F4F4] h-[36px] text-[14px] relative `}>
                         <FiExternalLink />
                     </button>
                 </div>

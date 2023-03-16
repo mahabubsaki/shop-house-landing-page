@@ -4,8 +4,8 @@ import styles from '../styles/SaleBanner.module.css';
 const SaleBanner = () => {
     return (
         <div className='mt-[21px] mb-[44px] animate__animated animate__fadeInUp'>
-            <div className={`max-w-[1200px] flex flex-col items-center sm:flex-row mx-auto ${styles['banner-container']} py-[18px]`}>
-                <div className='pl-[10px] text-white text-[16px] sm:text-[18px] lg:-[20px] font-bold leading-6 pr-[10px] mb-4 md:mb-0 flex-[0_0_75%] flex-wrap flex items-center'>
+            <div className={`max-w-[1200px] flex flex-col items-center sm:flex-row mx-[20px] xl:mx-auto ${styles['banner-container']} py-[18px]`}>
+                <div className='pl-[10px]  text-white text-[16px] sm:text-[18px] lg:-[20px] font-bold leading-6 pr-[10px] mb-4 md:mb-0 flex-[0_0_75%] flex-wrap flex items-center'>
                     <p className='px-[15px] block text-center sm:text-left'>
                         <span className={`inline-block py-2 mr-[10px] mb-[9px] md:mb-[0px] px-3 text-[16px] sm:text-[18px] lg:-[20px] font-bold text-white z-[2] relative ${styles['big-sale']}`}>BIG SALE</span>
                         ALL NEW FASHION BRANDS ITEMS UP TO 70% OFF

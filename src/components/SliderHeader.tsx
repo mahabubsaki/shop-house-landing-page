@@ -18,7 +18,7 @@ const SliderHeader = () => {
                 navigation={true}
                 autoplay={{
                     delay: 5000,
-                    disableOnInteraction: true,
+                    pauseOnMouseEnter: true,
                 }}
                 loop={true}
                 pagination={{

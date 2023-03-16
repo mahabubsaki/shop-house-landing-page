@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TfiClose } from 'react-icons/tfi';
 
 
 const Notice = () => {
     const [visible, setVisible] = useState(true);
     const [hide, setHide] = useState(false);
+    useEffect(() => {
+        if (visible) return;
+        const timeId = setTimeout(() => {
+            setHide(true);
+        }, 700);
+        return () => {
+            clearTimeout(timeId);
+        };
+    }, [visible]);
     return (
 
         <div className={`bg-[#0088CC] duration-500 ${hide && 'hidden'} ${visible ? 'h-auto px-5 py-[10px]' : 'h-0 px-0 py-0'} text-[13px] font-medium tracking-wide leading-[26px] text-white`}>
@@ -17,10 +26,6 @@ const Notice = () => {
                 </div>
                 <TfiClose onClick={() => {
                     setVisible(false);
-                    const x = setTimeout(() => {
-                        setHide(true);
-                        clearTimeout(x);
-                    }, 700);
                 }} className='absolute right-0 top-1/2 -translate-y-1/2  opacity-50 hover:opacity-100 hover:scale-105 cursor-pointer duration-300' />
             </div>
         </div>

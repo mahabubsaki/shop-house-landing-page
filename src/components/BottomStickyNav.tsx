@@ -37,7 +37,7 @@ const BottomStickyNav = () => {
                             <span>CATEGORIES</span>
                             <MdOutlineKeyboardArrowDown />
                             <ul className={`absolute z-1 -left-[10px] flex flex-col -right-[10px] shadow-md duration-500 ${styles['lang-dropdown']}`}>
-                                {categories.map((item, index) => <li key={index}>{item}</li>)}
+                                {categories.map((item, index) => <li key={index}>{item.name}</li>)}
                             </ul>
                         </li>
                         <li className={`border-transparent relative border-t-[3px] duration-500 hover:border-[#08C] z-20 py-[20px] cursor-pointer flex items-center gap-1 ${styles['lang-title']}`}>

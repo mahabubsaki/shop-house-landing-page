@@ -194,7 +194,7 @@ const MiddleNav = () => {
                                             <span className=' relative left-[-35px]'>HOME</span>
                                         </Nav.Item>
                                         <Nav.Menu className='relative left-[-35px] border-b border-[#242527] ' placement="rightStart" eventKey="2" title="CATEGORIES" >
-                                            {categories.map((item, i) => <Nav.Item key={item} eventKey={`2-${i + 1}`} className='border-b border-[#242527]'>{item}</Nav.Item>)}
+                                            {categories.map((item, i) => <Nav.Item key={i} eventKey={`2-${i + 1}`} className='border-b border-[#242527]'>{item.name}</Nav.Item>)}
                                         </Nav.Menu>
                                         <Nav.Menu className='relative left-[-35px] border-b border-[#242527]' placement="rightStart" eventKey="3" title="BRANDS" >
                                             {brands.map((item, i) => <Nav.Item key={item} eventKey={`3-${i + 1}`} className='border-b border-[#242527]'>{item}</Nav.Item>)}
