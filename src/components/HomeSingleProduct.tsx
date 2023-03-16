@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
-import { BsCartPlus, BsFillHeartFill, BsHeart } from 'react-icons/bs';
+import { BsCartPlus, BsHeart } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
 
 const HomeSingleProduct = ({ item: { category, discount, image, isHot, name, price, rating }, delay, isFeatured, isNewArrival, section }: {
