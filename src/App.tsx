@@ -42,6 +42,7 @@ function App() {
       <BrandsMarquee />
       <Footer />
       <MobileBottomNav />
+      {/* all done for home page */}
     </div>
   );
 }
