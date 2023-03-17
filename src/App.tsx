@@ -15,6 +15,7 @@ import FeaturedProducts from './components/FeaturedProducts';
 import SaleBanner from './components/SaleBanner';
 import CategoriesSlider from './components/CategoriesSlider';
 import Services from './components/Services';
+import ParallexPromo from './components/ParallexPromo';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <SaleBanner />
       <CategoriesSlider />
       <Services />
+      <ParallexPromo />
       <div className='h-[10000px]'>
 
       </div>
