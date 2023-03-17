@@ -49,11 +49,11 @@ const CategoriesSlider = () => {
                     <Swiper onSlideChange={(swiper) => {
                         if (swiper.realIndex === categories.length - 1) setIsLastSlide(true);
                         if (swiper.realIndex === 0) setIsLastSlide(false);
-                    }} onInit={(swiper) => swiperRef.current = swiper}
+                    }} modules={[Navigation]} onInit={(swiper) => swiperRef.current = swiper}
                         autoplay={isCategoryInView ? {
                             delay: 500,
                             reverseDirection: isLastSlide
-                        } : undefined} speed={2000} effect={'coverflow'}
+                        } : undefined} speed={2000} navigation={true} effect={'coverflow'}
                         breakpoints={{
                             1: {
                                 slidesPerView: 2,
@@ -72,8 +72,8 @@ const CategoriesSlider = () => {
                                 spaceBetween: 20
                             }
                         }}>
-                        {categories.map((item, i) => <SwiperSlide key={i}>
-                            <div className={`w-full ${styles.parent} cursor-pointer ${isCategoryInView && `animate__fadeInUp animate__animated animate__delay-${i}s`}`}>
+                        {categories.map((item, i) => <SwiperSlide className='mb-[20px]' key={i}>
+                            <div className={`w-full  shadow-none duration-500 hover:shadow-[0_12px_20px_0_rgba(0,0,0,0.08)] ${styles.parent} cursor-pointer ${isCategoryInView && `animate__fadeInUp animate__animated animate__delay-${i}s`}`}>
                                 <figure className={`w-full aspect-[1/1] ${styles.fig}`}>
                                     <div className='w-full h-full relative'>
                                         <img src={item.img} alt="" className='object-cover w-full h-full absolute inset-0' />

@@ -16,6 +16,9 @@ import SaleBanner from './components/SaleBanner';
 import CategoriesSlider from './components/CategoriesSlider';
 import Services from './components/Services';
 import ParallexPromo from './components/ParallexPromo';
+import LatestNews from './components/LatestNews';
+import BrandsMarquee from './components/BrandsMarquee';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -35,9 +38,9 @@ function App() {
       <CategoriesSlider />
       <Services />
       <ParallexPromo />
-      <div className='h-[10000px]'>
-
-      </div>
+      <LatestNews />
+      <BrandsMarquee />
+      <Footer />
       <MobileBottomNav />
     </div>
   );
